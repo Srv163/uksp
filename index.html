@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="description" content="УКСП — специальные проекты на торгах по банкротству. Недвижимость, промышленные объекты и права требования. Проверка до заявки, дисциплина цены, открытая логика решений.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="УКСП — специальные проекты на торгах по банкротству">
+  <meta property="og:description" content="Проверяем до заявки. Соблюдаем лимит цены. Раскрываем логику решений.">
+  <title>УКСП — специальные проекты на торгах по банкротству</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/plex-serif-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/plex-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="concept.css">
+  <link rel="stylesheet" href="architecture.css">
+  <script src="app.js" defer></script>
+  <script src="assets/vendor/three.min.js" defer></script>
+  <script src="scene-architecture.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержанию</a>
+<header class="hero" id="top">
+  <div class="hero-pin">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="#top" aria-label="УКСП — на главную"><span class="wordmark">УКСП</span><span class="brand-description">Управляющая компания<br>специальных проектов</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Меню <span aria-hidden="true">+</span></button>
+      <nav id="navigation" aria-label="Основная навигация">
+        <a href="#process">Подход</a><a href="#cases">Дела</a><a href="#platform">Платформа</a><a href="#frame">Правила</a><a class="nav-access" href="#access">Обсудить проект</a>
+      </nav>
+    </div>
+    <div class="hero-stage" data-phase="0">
+      <div class="hero-copy">
+        <div class="edition"><span class="live-dot"></span> Специальные проекты на торгах по банкротству</div>
+        <h1>Раскрываем<br>потенциал<em>сложных активов.</em></h1>
+        <p class="hero-description">Видим структуру за ограничениями. <br>Приобретаем актив. Собираем решение. <br>Доводим до реализации.</p>
+        <div class="hero-actions"><a class="hero-cta" href="#cases"><span>Наши решения</span><span class="cta-orbit" aria-hidden="true">↗</span></a><a class="hero-platform-link" href="#platform"><span>KRATNO INVEST</span><small>Платформа УКСП</small></a></div>
+      </div>
+      <div class="object-stage" id="object-stage">
+        <div class="scene-halo" aria-hidden="true"></div>
+        <canvas id="asset-canvas" aria-label="Архитектурная модель подхода: цельный стеклянный объём раскрывается и собирается в открытый павильон. Этапы доступны кнопками ниже."></canvas>
+        <div class="scene-fallback" aria-hidden="true"><div></div><div></div><div></div><div></div></div>
+        <div class="object-coordinate coord-top"><span class="scene-cross">+</span> Архитектура преобразования</div>
+        <div class="object-coordinate coord-side">УКСП / Исследование формы</div>
+        <div class="object-label label-right"><span class="label-rule"></span><div><span class="label-index" id="layer-index">01 / Исходная структура</span><b id="layer-label">Актив и его ограничения</b></div></div>
+        <div class="object-label label-left"><span class="label-rule"></span><div><span class="label-index">В основе — ценность</span><b id="core-label">Объект. Права. Обязательства.</b></div></div>
+        <div class="scene-result" id="scene-result"><span>Сценарий определён</span><p>Продажа · Аренда · Взыскание</p><a href="#cases">От подхода к делам <span aria-hidden="true">↗</span></a></div>
+        <div class="object-note"><span class="orbit-cross" aria-hidden="true">+</span><span>Одна конструкция.<br>Новые возможности.</span></div>
+        <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" aria-label="Отключить плавное движение">Ⅱ</button>
+      </div>
+      <div class="hero-footnote"><span>Недвижимость / Промышленные объекты / Права требования</span><a class="scroll-cue" href="#process">Листайте, чтобы раскрыть <span aria-hidden="true">↓</span></a></div>
+    </div>
+    <div class="phase-console">
+      <div class="phase-overview"><span class="phase-count" id="phase-count">01<span>/ 04</span></span><p id="phase-caption">У каждого сложного актива есть внутренняя логика.</p></div>
+      <div class="phase-tabs" role="group" aria-label="Этапы работы с активом">
+        <button type="button" data-phase="0" aria-pressed="true"><span>01 / Актив</span><b>Увидеть целое</b><i></i></button>
+        <button type="button" data-phase="1" aria-pressed="false"><span>02 / Анализ</span><b>Раскрыть структуру</b><i></i></button>
+        <button type="button" data-phase="2" aria-pressed="false"><span>03 / Решение</span><b>Собрать по-новому</b><i></i></button>
+        <button type="button" data-phase="3" aria-pressed="false"><span>04 / Реализация</span><b>Воплотить сценарий</b><i></i></button>
+      </div>
+    </div>
+  </div>
+  </div>
+</header>
+<main id="main">
+  <section id="process" class="section process-section">
+    <div class="wrap">
+      <div class="section-heading"><p class="section-index">01 / Суть подхода</p><h2>Ценность не всегда<br><em>на поверхности.</em></h2><p class="section-description">Цена лота — только начало. Значение имеют права, обязательства и то, что можно сделать с активом дальше.</p></div>
+      <div class="process-grid">
+        <article class="process-step"><div class="step-top"><span>01</span><span class="step-track" aria-hidden="true"></span></div><h3>Поиск</h3><p>Отбираем недвижимость, промышленные объекты и права требования на торгах. Ищем активы, где сложность ограничивает круг покупателей.</p><span class="step-foot">От объявления к гипотезе</span></article>
+        <article class="process-step"><div class="step-top"><span>02</span><span class="step-track" aria-hidden="true"></span></div><h3>Проверка</h3><p>Изучаем ЕГРН, судебные дела и исполнительные производства. Выезжаем на объект. Учитываем обременения и скрытые обязанности.</p><span class="step-foot">От гипотезы к расчёту</span></article>
+        <article class="process-step"><div class="step-top"><span>03</span><span class="step-track" aria-hidden="true"></span></div><h3>Вход</h3><p>Назначаем лимит цены и период заявки. Оплата лота идёт в конкурсную массу, расчёты — через номинальный или эскроу-счёт.</p><span class="step-foot">Цена определена заранее</span></article>
+        <article class="process-step"><div class="step-top"><span>04</span><span class="step-track" aria-hidden="true"></span></div><h3>Выход</h3><p>Продажа, аренда или выпуск цифровых финансовых активов с залогом объекта через оператора из реестра Банка России.</p><span class="step-foot">По сценарию конкретного дела</span></article>
+      </div>
+    </div>
+  </section>
+  <section id="cases" class="section cases-section">
+    <div class="wrap">
+      <div class="section-heading"><p class="section-index">02 / Реестр дел</p><h2>Решения.<br><span class="muted">Включая отказы.</span></h2><p class="section-description">За каждым решением — проверка.<br>Полные документы и расчёты раскрываем после соглашения о конфиденциальности.</p></div>
+      <div class="sieve-panel">
+        <div class="sieve-top"><span>Дисциплина отбора</span><span class="demo-label">Демонстрационный срез за 12 месяцев</span></div>
+        <div id="sieve" class="sieve" aria-hidden="true"></div>
+        <div class="sieve-bottom"><div class="sieve-stat"><span class="legend-dot reviewed"></span><b>240</b> просмотрено</div><div class="sieve-stat"><span class="legend-dot checked"></span><b>31</b> проверен</div><div class="sieve-stat"><span class="legend-dot bid"></span><b>7</b> заявок</div><div class="sieve-stat"><span class="legend-dot deal"></span><b>3</b> сделки</div><button class="plain-link" data-dialog="methodology" type="button">Как считаем</button></div>
+      </div>
+      <div class="registry-toolbar"><div class="case-filters" role="group" aria-label="Фильтр реестра"><button type="button" data-filter="all" aria-pressed="true">Все дела <span>04</span></button><button type="button" data-filter="deals" aria-pressed="false">Приобретено <span>02</span></button><button type="button" data-filter="refused" aria-pressed="false">Отказы <span>01</span></button><button type="button" data-filter="lost" aria-pressed="false">Не досталось <span>01</span></button></div><span class="registry-note">Обезличенные примеры</span></div>
+      <div class="registry-columns" aria-hidden="true"><span>№</span><span>Суть дела / регион</span><span>Решение</span><span></span></div>
+      <div id="registry"><!-- CASES_START -->
+<details class="case" data-status="purchased" open>
+  <summary><span class="case-number">01</span><span><span class="case-name">Имущественный комплекс с арестом 2012 года</span><span class="case-region">ЮФО, промышленная зона</span></span><span class="case-status purchased">Куплено, оформление права</span><span class="case-plus" aria-hidden="true"></span></summary>
+  <div class="case-inner"><div class="case-copy"><div><h4>Почему лот стоял</h4><p>В ЕГРН оставалась запись об аресте по чужому исполнительному производству 2012 года. Санитарно-защитная зона соседнего предприятия накрывала больше половины участка. Работа с обременениями требовала участия конкурсного управляющего, приставов и суда.</p></div><div><h4>Что сделали</h4><p>Проверили возможность снятия обременений, определили допустимую цену и подали заявку на подходящем периоде торгов.</p></div><div><h4>Текущий результат</h4><p>Объект приобретён. Идёт снятие ареста и регистрация перехода права. Актив выделен в отдельное юридическое лицо под выпуск с залогом участка.</p></div></div><aside class="case-card" aria-label="Ключевые факты дела 01"><div class="case-card-top"><span>Логика решения</span><span>Мандат М2</span></div><div class="decision-structure" aria-label="Структура решения"><div class="decision-line"><div><span>Сложность</span><b>Арест и санитарная зона</b></div></div><div class="decision-line"><div><span>Работа</span><b>Проверка ограничений и приобретение</b></div></div><div class="decision-line"><div><span>Текущий этап</span><b>Регистрация права</b></div></div></div><dl class="case-facts"><div><dt>Актив</dt><dd>Имущественный комплекс</dd></div><div><dt>Цена входа и оценка</dt><dd>В материалах дела</dd></div><div><dt>Юридическая работа</dt><dd>Снятие ареста</dd></div></dl><div class="seal purchased">Куплено</div></aside></div>
+</details>
+<details class="case" data-status="refused" >
+  <summary><span class="case-number">02</span><span><span class="case-name">«Обременений нет» — ипотека и три оспаривания</span><span class="case-region">УрФО, около 1,8 га</span></span><span class="case-status refused">Отказ после проверки</span><span class="case-plus" aria-hidden="true"></span></summary>
+  <div class="case-inner"><div class="case-copy"><div><h4>Как выглядел лот</h4><p>Цена периода ниже кадастровой стоимости, работающая котельная, запас мощности подстанции. Рядом растущий жилой район. По карточке агрегатора объект выглядел подходящим для покупки.</p></div><div><h4>Что вскрыла проверка</h4><p>В ЕГРН здание числится незавершённым строительством без ввода в эксплуатацию. На объекте ипотека небанковского кредитора из отступного за 24 дня до заявления о банкротстве. У финансового управляющего в работе три оспаривания сделок должника.</p></div><div><h4>Решение</h4><p>С учётом легализации здания и риска по залогу нужной цены на графике не оказалось даже на отсечке. Заявку не подавали. Так заканчивается большинство лотов, которые мы смотрим.</p></div></div><aside class="case-card" aria-label="Ключевые факты дела 02"><div class="case-card-top"><span>Логика решения</span><span>Мандат М2</span></div><div class="decision-structure" aria-label="Структура решения"><div class="decision-line"><div><span>Сложность</span><b>Скрытые обременения</b></div></div><div class="decision-line"><div><span>Проверка</span><b>Ипотека и три оспаривания</b></div></div><div class="decision-line"><div><span>Решение</span><b>Заявку не подавали</b></div></div></div><dl class="case-facts"><div><dt>Заявка</dt><dd>Не подавалась</dd></div><div><dt>Допустимая цена</dt><dd>Ниже отсечки</dd></div><div><dt>Стоп-фактор</dt><dd>Риски по залогу</dd></div></dl><div class="seal refused">Отказ</div></aside></div>
+</details>
+<details class="case" data-status="closed" >
+  <summary><span class="case-number">03</span><span><span class="case-name">Денежное требование за 3% номинала</span><span class="case-region">Номинал 127,2 млн ₽</span></span><span class="case-status closed">Сделка закрыта, взыскание</span><span class="case-plus" aria-hidden="true"></span></summary>
+  <div class="case-inner"><div class="case-copy"><div><h4>Почему лот стоял</h4><p>Задолженность продавалась в составе имущества банкрота и оценивалась рынком как безнадёжная. Возраст долга отвлекал внимание от состояния самого должника.</p></div><div><h4>Что сделали</h4><p>Проверили должника: компания ведёт деятельность, не имеет признаков банкротства и располагает имуществом, достаточным для исполнения. Требование приобретено на отсечке.</p></div><div><h4>Текущий результат</h4><p>Сделка по приобретению требования закрыта. Взыскание в работе; его результат будет отражён отдельно после завершения процедуры.</p></div></div><aside class="case-card" aria-label="Ключевые факты дела 03"><div class="case-card-top"><span>Логика решения</span><span>Мандат М3</span></div><div class="decision-structure" aria-label="Структура решения"><div class="decision-line"><div><span>Сложность</span><b>Требование оценивалось как безнадёжное</b></div></div><div class="decision-line"><div><span>Проверка</span><b>Деятельность и имущество должника</b></div></div><div class="decision-line"><div><span>Текущий этап</span><b>Взыскание задолженности</b></div></div></div><dl class="case-facts"><div><dt>Период заявки</dt><dd>06 / 06</dd></div><div><dt>Номинал требования</dt><dd>127,2 млн ₽</dd></div><div><dt>Текущая стадия</dt><dd>Взыскание</dd></div></dl><div class="seal closed">Сделка закрыта</div></aside></div>
+</details>
+<details class="case" data-status="lost" >
+  <summary><span class="case-number">04</span><span><span class="case-name">Квартира, ушедшая другому на третьем периоде</span><span class="case-region">ЦФО, областной центр</span></span><span class="case-status lost">Не досталось</span><span class="case-plus" aria-hidden="true"></span></summary>
+  <div class="case-inner"><div class="case-copy"><div><h4>Как выглядел лот</h4><p>Квартира без обременений в новом доме. Рынок по аналогам подтверждён; объект прошёл предварительный отбор.</p></div><div><h4>Что сделали</h4><p>Рассчитали лимит цены на уровне 55% от рынка с учётом срока продажи. Другой участник приобрёл лот на третьем периоде, на 18% выше нашего лимита.</p></div><div><h4>Решение</h4><p>Лимит не пересматривали. Цена, по которой мы не готовы покупать, не становится хорошей от того, что её заплатил кто-то другой.</p></div></div><aside class="case-card" aria-label="Ключевые факты дела 04"><div class="case-card-top"><span>Логика решения</span><span>Мандат М1</span></div><div class="decision-structure" aria-label="Структура решения"><div class="decision-line"><div><span>Актив</span><b>Квартира без обременений</b></div></div><div class="decision-line"><div><span>Проверка</span><b>Экономика и срок продажи</b></div></div><div class="decision-line"><div><span>Решение</span><b>Лимит цены сохранён</b></div></div></div><dl class="case-facts"><div><dt>Лот ушёл</dt><dd>В периоде 03</dd></div><div><dt>Цена другого участника</dt><dd>+18% к нашему лимиту</dd></div><div><dt>Решение</dt><dd>Не догонять цену</dd></div></dl><div class="seal lost">Лимит сохранён</div></aside></div>
+</details>
+<!-- CASES_END --></div>
+      <p class="sr-only" id="filter-status" aria-live="polite"></p>
+      <div class="registry-bottom"><p>Адреса, имена и контрагенты не раскрываются.</p><a class="text-link" href="#access">Запросить полные материалы <span class="link-line" aria-hidden="true"></span></a></div>
+    </div>
+  </section>
+  <section id="platform" class="section platform-section">
+    <div class="wrap">
+      <div class="platform-kicker"><span>Компания и платформа</span><span class="platform-family">УКСП <span aria-hidden="true">/</span> KRATNO INVEST</span></div>
+      <div class="platform-layout">
+        <div class="platform-copy"><p class="section-index">Цифровой контур УКСП</p><h2>Наш подход.<br><em>Ваша платформа.</em></h2><p>УКСП ведёт специальные проекты.<br>KRATNO INVEST связывает нашу работу с инвестором: от его мандата до отобранных возможностей.</p><a class="platform-cta" href="https://kratnoinvest.ru" target="_blank" rel="noopener noreferrer"><span>Перейти в KRATNO INVEST</span><span aria-hidden="true">↗</span></a><span class="platform-address">kratnoinvest.ru / платформа УКСП</span></div>
+        <div class="platform-visual" aria-label="Маршрут инвестора в KRATNO INVEST">
+          <div class="platform-wordmark"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="29" width="8" height="14" rx="1"/><rect x="20" y="19" width="8" height="24" rx="1"/><rect x="35" y="5" width="8" height="38" rx="1"/></svg><span>KRATNO <span>INVEST</span></span><small>Платформа УКСП</small></div>
+          <div class="platform-route" role="group" aria-label="Маршрут на платформе"><button type="button" data-platform-step="0" aria-pressed="true"><span>01</span> Ваш мандат</button><button type="button" data-platform-step="1" aria-pressed="false"><span>02</span> Наш анализ</button><button type="button" data-platform-step="2" aria-pressed="false"><span>03</span> Ваше решение</button></div>
+          <div class="platform-stage" data-active="0"><div class="platform-depth depth-back" aria-hidden="true"></div><div class="platform-depth depth-middle" aria-hidden="true"></div><div class="platform-document"><div class="document-top"><span id="platform-document-type">Инвестиционный мандат</span><span id="platform-document-number">01 / 03</span></div><h3 id="platform-document-title">Вы определяете<br>рамки поиска.</h3><div class="document-tags" id="platform-tags"><span>Бюджет</span><span>География</span><span>Тип актива</span><span>Горизонт</span><span>Уровень риска</span></div><div class="document-bottom"><span class="document-signal" aria-hidden="true"></span><span id="platform-document-note">Отбор начинается с ваших критериев</span></div></div></div>
+          <div class="platform-bottom"><span>Мандат → Анализ → Возможность</span><span>KRATNO INVEST</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="mandates" class="section mandates-section">
+    <div class="wrap"><div class="section-heading"><p class="section-index">03 / Мандаты</p><h2>Разные активы.<br><span class="muted">Одна дисциплина.</span></h2><p class="section-description">У каждого мандата — своя компетенция, экономика и горизонт работы.</p></div>
+      <div class="mandates-grid">
+        <article class="mandate"><span class="mandate-code">М<span>1</span></span><div class="mandate-body"><h3>Жилая<br>недвижимость</h3><p>Квартиры и дома с понятным рынком. Юридическая чистота, подтверждённые аналоги и сценарий продажи.</p></div><div class="mandate-foot"><span>Ключевой фактор</span><span>Ликвидность</span></div></article>
+        <article class="mandate"><span class="mandate-code">М<span>2</span></span><div class="mandate-body"><h3>Сложные<br>объекты</h3><p>Промышленные площадки и региональные активы. Обременения и дефекты оформления, которые требуют работы.</p></div><div class="mandate-foot"><span>Ключевой фактор</span><span>Снятие ограничений</span></div></article>
+        <article class="mandate"><span class="mandate-code">М<span>3</span></span><div class="mandate-body"><h3>Специальные<br>ситуации</h3><p>Денежные требования, дебиторская задолженность, субсидиарная ответственность. Результат зависит от взыскания.</p></div><div class="mandate-foot"><span>Ключевой фактор</span><span>Исполнимость</span></div></article>
+      </div>
+    </div>
+  </section>
+  <section id="people" class="section people-section"><div class="wrap">
+    <div class="section-heading"><p class="section-index">04 / Кто ведёт дела</p><h2>У каждого дела<br><span class="muted">есть ответственный.</span></h2><p class="section-description">Материалы под NDA подписаны конкретным человеком. На сайте показываем роли в работе над активом.</p></div>
+    <div class="people-grid"><article><span class="role-number">01 / Анализ</span><h3>Поиск и проверка</h3><p>Отбор лотов, оценка актива и расчёт цены входа. Структурирование сделки.</p></article><article><span class="role-number">02 / Взаимодействие</span><h3>Инвесторы и партнёры</h3><p>Раскрытие материалов, работа с партнёрскими платформами и согласование периметра.</p></article><article><span class="role-number">03 / Право</span><h3>Сопровождение и взыскание</h3><p>Банкротная практика, регистрация прав, снятие обременений и исполнение требований.</p></article></div>
+  </div></section>
+  <section id="frame" class="section rules-section"><div class="wrap">
+    <div class="rules-head"><p class="section-index">05 / Правила</p><h2>Лимит цены —<br><span>это решение.</span></h2><p>Мы не пересматриваем его только потому, что кто-то готов заплатить больше.</p></div>
+    <div class="rules-grid"><div><h3>Как устроены деньги</h3><ul><li><span>01</span>Средства инвесторов — на номинальных и эскроу-счетах, вне счетов компании.</li><li><span>02</span>Оплата лота — напрямую в конкурсную массу должника.</li><li><span>03</span>Вознаграждение — плата за проверку и доля в результате сделки.</li><li><span>04</span>Компания и партнёры участвуют собственными средствами первым убытком.</li></ul></div><div><h3>Границы нашей работы</h3><ul><li><span>01</span>Не управляем чужими активами и не оказываем брокерских услуг.</li><li><span>02</span>Не привлекаем средства в коллективные инвестиции вне установленного законом периметра.</li><li><span>03</span>Выпуски ЦФА — через операторов из реестра Банка России.</li><li><span>04</span>Экономика и риски каждой сделки раскрываются отдельно в её документах.</li></ul></div></div>
+    <div class="rules-bottom"><span>Проверка до заявки</span><span>Прямые расчёты</span><span>Отдельный учёт по каждому делу</span></div>
+  </div></section>
+  <section id="contour" class="section contour-section"><div class="wrap contour-layout"><div><p class="section-index">06 / Контур работы</p><h2>Проверяем<br><span class="muted">по источникам.</span></h2><p class="contour-note">Инструменты и участники, с которыми связана работа над делом.</p></div><dl class="contour-table"><div><dt>Торговые площадки</dt><dd>Российский аукционный дом, ЦДТ, МЭТС, Вердикт, ВЭТП, tbankrot и другие</dd></div><div><dt>Источники проверки</dt><dd>ЕФРСБ, ЕГРН и НСПД, картотека арбитражных дел, ЕГРЮЛ, ФССП</dd></div><div><dt>Операторы выпуска</dt><dd>Платформы из реестра операторов информационных систем Банка России</dd></div><div><dt>Сопровождение</dt><dd>Банкротная и регистрационная практика. Оценщики и юридические специалисты под каждое дело</dd></div><div><dt>Подбор конкретных лотов</dt><dd><a class="product-link" href="https://kratnoinvest.ru" target="_blank" rel="noopener noreferrer">kratnoinvest.ru</a><span class="product-description">Продуктовая площадка компании</span></dd></div></dl></div></section>
+  <section id="access" class="section access-section"><div class="wrap">
+    <div class="access-top"><p class="section-index">07 / Доступ</p><span>Следующий шаг — предметный разговор.</span></div>
+    <div class="access-layout"><div class="access-intro"><h2 id="access-title">За каждым делом —<br><span class="muted">документы.</span></h2><p id="access-text">Меморандумы, финансовые модели и документы по активам передаём после подписания соглашения о конфиденциальности.</p><div class="access-note"><span class="nda-mark">NDA</span><p>Полная картина сделки.<br>В закрытом контуре.</p></div></div>
+      <div class="access-form-container"><div class="routes" role="group" aria-label="Цель обращения"><button type="button" data-route="investor" aria-pressed="true">Я инвестор</button><button type="button" data-route="partner" aria-pressed="false">Я партнёр</button><button type="button" data-route="seller" aria-pressed="false">У меня есть актив</button></div>
+        <form id="access-form" novalidate data-endpoint=""><input type="hidden" name="purpose" id="purpose" value="investor"><div class="form-fields"><div class="field"><label for="name">Как к вам обращаться</label><input id="name" name="name" autocomplete="name" maxlength="100" placeholder="Имя" required aria-describedby="name-error"><span class="field-error" id="name-error"></span></div><div class="field"><label for="contact">Почта или телефон</label><input id="contact" name="contact" autocomplete="email" maxlength="160" placeholder="Для обратной связи" required aria-describedby="contact-error"><span class="field-error" id="contact-error"></span></div></div>
+          <div class="field seller-field" hidden><label for="asset">Объект, регион и текущий статус</label><textarea id="asset" name="asset" maxlength="3000" rows="3" placeholder="Расскажите об активе в двух строках" aria-describedby="asset-error"></textarea><span class="field-error" id="asset-error"></span></div>
+          <div class="honeypot" aria-hidden="true"><label for="website">Сайт</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <label class="check-label" for="pd"><input id="pd" name="consent" type="checkbox" required aria-describedby="pd-error"><span>Согласен на обработку персональных данных. <button class="inline-link" type="button" data-dialog="privacy">Политика</button> и <button class="inline-link" type="button" data-dialog="consent">согласие</button>.</span></label><span class="field-error" id="pd-error"></span>
+          <div id="qualification"><label class="check-label" for="qualified"><input id="qualified" name="qualified" type="checkbox" aria-describedby="qualified-error"><span>Подтверждаю статус квалифицированного инвестора.</span></label><span class="field-error" id="qualified-error"></span><p class="qualification-note">Статус проверяет оператор информационной системы перед выдачей материалов по выпускам.</p></div>
+          <button class="submit-button" type="submit" id="submit">Запросить материалы</button><p class="form-demo-note">Демонстрационная форма. Контакты не отправляются.</p><div class="form-result" id="form-result" role="status" tabindex="-1" hidden></div>
+        </form>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer><div class="wrap"><div class="footer-top"><a class="brand footer-brand" href="#top"><span class="wordmark">УКСП</span><span class="brand-description">Управляющая компания<br>специальных проектов</span></a><a class="footer-platform" href="https://kratnoinvest.ru" target="_blank" rel="noopener noreferrer">KRATNO INVEST <span>Платформа УКСП ↗</span></a><a class="plain-link" href="#top">К началу страницы ↑</a></div><div class="footer-body"><p>Информация носит справочный характер и не является публичной офертой, индивидуальной инвестиционной рекомендацией или рекламой финансовых инструментов. Приобретение имущества на торгах и вложения в ЦФА связаны с риском полной потери вложенных средств. Результаты прошлых сделок не гарантируют результатов будущих.</p><p>ООО «УКСП» не является управляющей компанией в значении закона «Об инвестиционных фондах» и не осуществляет лицензируемых видов деятельности на финансовом рынке.</p></div><div class="footer-bottom"><span>© 2026 ООО «УКСП»</span><div><button class="plain-link" data-dialog="privacy" type="button">Персональные данные</button><button class="plain-link" data-dialog="methodology" type="button">Методика отбора</button><button class="plain-link" id="cookie-settings" type="button">Настройки cookies</button></div><span class="preview-status">Дизайн-концепция / данные не подтверждены</span></div></div></footer>
+<aside class="cookie" id="cookie" aria-label="Настройки cookies" hidden><div><b>Ваш выбор — в приоритете.</b><p>В этой версии аналитика отключена. Сохраним только ваш выбор cookies в браузере.</p></div><div class="cookie-actions"><button type="button" data-cookie="essential">Только необходимые</button><button type="button" data-cookie="all">Разрешить все</button></div></aside>
+<dialog id="info-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span>УКСП / Информация</span><button id="dialog-close" type="button" aria-label="Закрыть окно">×</button></div><h2 id="dialog-title"></h2><div id="dialog-content"></div></dialog>
+<noscript><div class="noscript-note">Реестр доступен без JavaScript. Для фильтров, настроек и демонстрации формы включите JavaScript.</div></noscript>
+<script id="register-data" type="application/json">{"demo":true,"snapshot":null,"statistics":{"reviewed":240,"checked":31,"bids":7,"deals":3}}</script>
+</body>
+</html>
