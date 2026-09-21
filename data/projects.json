@@ -1,0 +1,47 @@
+{
+  "source": {
+    "file": "Портфолио 2023-2026.xlsx",
+    "sheet": "История",
+    "selection": "Три реализованных проекта с наибольшей ценой продажи",
+    "salePriceBasis": "Без НДС",
+    "holdingPeriodBasis": "От даты полной оплаты до даты продажи"
+  },
+  "projects": [
+    {
+      "id": "01",
+      "title": "Очистные в Раменском",
+      "sourceTitle": "Раменское очистные",
+      "category": "Недвижимость",
+      "sourceRow": 7,
+      "purchasePrice": 7160600,
+      "salePrice": 46500000,
+      "purchaseDate": "2024-09-13",
+      "saleDate": "2025-01-21",
+      "status": "realized"
+    },
+    {
+      "id": "02",
+      "title": "Шлак никеля",
+      "sourceTitle": "Шлак Никеля",
+      "category": "Товарно-материальные ценности",
+      "sourceRow": 13,
+      "purchasePrice": 4429950,
+      "salePrice": 18000000,
+      "purchaseDate": "2025-05-30",
+      "saleDate": "2026-02-06",
+      "status": "realized"
+    },
+    {
+      "id": "03",
+      "title": "Борисоглебск",
+      "sourceTitle": "Борисоглебск",
+      "category": "Недвижимость",
+      "sourceRow": 5,
+      "purchasePrice": 2011111.11,
+      "salePrice": 3500000,
+      "purchaseDate": "2024-03-28",
+      "saleDate": "2025-02-07",
+      "status": "realized"
+    }
+  ]
+}

@@ -13,22 +13,6 @@
     $('.platform-stage').dataset.active=String(i);$('#platform-document-type').textContent=step.type;$('#platform-document-number').textContent=`0${i+1} / 03`;$('#platform-document-title').textContent=step.title;$('#platform-document-note').textContent=step.note;
     $('#platform-tags').replaceChildren(...step.tags.map(t=>{const s=document.createElement('span');s.textContent=t;return s;}));
   }));
-  const data = JSON.parse($('#register-data').textContent);
-  const stats = data.statistics;
-  const sieve = $('#sieve');
-  const checked = new Set(Array.from({length:stats.checked},(_,i)=>Math.floor(i*stats.reviewed/stats.checked)));
-  const checkedArray = [...checked];
-  const bids = new Set(Array.from({length:stats.bids},(_,i)=>checkedArray[Math.floor(i*stats.checked/stats.bids)]));
-  const bidsArray = [...bids];
-  const deals = new Set(Array.from({length:stats.deals},(_,i)=>bidsArray[Math.floor(i*stats.bids/stats.deals)]));
-  if(stats.reviewed < 100)sieve.hidden=true;
-  else {
-    sieve.style.gridTemplateColumns=`repeat(${stats.reviewed},minmax(0,1fr))`;
-    const fragment=document.createDocumentFragment();
-    for(let i=0;i<stats.reviewed;i++){const item=document.createElement('span');item.className=deals.has(i)?'deal':bids.has(i)?'bid':checked.has(i)?'checked':'';fragment.append(item);}
-    sieve.append(fragment);
-  }
-
   const menu=$('.menu-toggle'), nav=$('#navigation');
   function closeMenu(){menu.setAttribute('aria-expanded','false');nav.classList.remove('is-open');}
   menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open);});
@@ -36,17 +20,9 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
   document.addEventListener('click',e=>{if(!e.target.closest('.topbar'))closeMenu();});
 
-  $$('.case-filters button').forEach(button=>button.addEventListener('click',()=>{
-    const value=button.dataset.filter;
-    $$('.case-filters button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-    let count=0;
-    $$('.case').forEach(c=>{const status=c.dataset.status;const show=value==='all'||(value==='deals'?['purchased','closed','active'].includes(status):status===value);c.hidden=!show;if(show)count++;});
-    $('#filter-status').textContent=`Записей в реестре: ${count}`;
-  }));
-
   const dialog=$('#info-dialog');
   const info={
-    methodology:{title:'Как считаем отбор',content:'<p>Четыре вложенные группы: каждая следующая входит в предыдущую. Период — скользящие 12 месяцев, обновление — раз в квартал.</p><dl><div><dt>Просмотрено</dt><dd>Лот занесён во внутренний реестр с первичной оценкой цены и рынка.</dd></div><div><dt>Полная проверка</dt><dd>Запрошены выписки ЕГРН, изучены судебные дела и ФССП, рассчитана экономика с учётом скрытых обязанностей.</dd></div><div><dt>Заявка</dt><dd>Внесён задаток и подана заявка на площадке.</dd></div><div><dt>Сделка</dt><dd>Подписан договор и произведена оплата.</dd></div></dl><p>В этой дизайн-концепции показаны демонстрационные значения из исходного прототипа. Дата среза и фактические показатели ещё не подтверждены.</p>'},
+    methodology:{title:'О показателях проектов',content:'<p>Показаны три реализованных проекта с наибольшей ценой продажи из портфолио 2023–2026.</p><dl><div><dt>Стоимость приобретения</dt><dd>Цена покупки из портфолио. Состав сопутствующих расходов здесь не раскрывается.</dd></div><div><dt>Цена продажи</dt><dd>Сумма продажи без НДС. Не является чистой прибылью или доходом инвестора.</dd></div><div><dt>Срок владения</dt><dd>Число календарных дней от полной оплаты до продажи.</dd></div></dl><p>Крупные значения округлены до сотых миллиона рублей. Точные суммы доступны в раскрывающихся карточках. Оценочные цены непроданных активов в этот раздел не включены.</p>'},
     privacy:{title:'Персональные данные',content:'<p>Это демонстрационная версия сайта. Поля формы используются только для проверки интерфейса в вашем браузере. Контакты не отправляются и не сохраняются в хранилище браузера. Аналитические счётчики отключены.</p><p>До запуска приёма обращений компания должна разместить утверждённую политику с реквизитами оператора, целями и условиями обработки, сроками хранения и контактами для обращений. В этой версии такой документ не подменяется шаблонным текстом.</p><p>Из настроек сохраняется только ваш выбор cookies. Его можно изменить по ссылке «Настройки cookies» внизу страницы.</p>'},
     consent:{title:'Согласие на обработку',content:'<p>В демонстрационной форме отметка согласия проверяет состояние интерфейса. Передачи персональных данных не происходит.</p><p>Для действующего сайта здесь размещается отдельный утверждённый текст согласия с полными реквизитами оператора, перечнем данных, целями обработки, сроком действия и способом отзыва.</p>'}
   };
@@ -104,6 +80,6 @@
   $('#cookie-settings').addEventListener('click',()=>{cookie.hidden=false;cookie.querySelector('button').focus();});
 
   let printState=[];
-  window.addEventListener('beforeprint',()=>{printState=$$('.case').map(c=>({element:c,open:c.open,hidden:c.hidden}));printState.forEach(s=>{s.element.open=true;s.element.hidden=false;});});
+  window.addEventListener('beforeprint',()=>{printState=$$('.project-details').map(c=>({element:c,open:c.open,hidden:c.hidden}));printState.forEach(s=>{s.element.open=true;s.element.hidden=false;});});
   window.addEventListener('afterprint',()=>printState.forEach(s=>{s.element.open=s.open;s.element.hidden=s.hidden;}));
 })();
