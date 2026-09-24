@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="description" content="Клуб инвесторов: мы ищем активы на торгах, анализируем их и предлагаем участникам только те возможности, которые соответствуют их инвестиционному мандату.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="KRATNO INVEST — клуб инвесторов в активы с торгов · платформа УКСП">
+  <meta property="og:description" content="Не каталог торгов. Не поток случайных лотов. Только отобранные инвестиционные возможности.">
+  <title>KRATNO INVEST — клуб инвесторов в активы с торгов · платформа УКСП</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/plex-serif-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/plex-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="concept.css">
+  <link rel="stylesheet" href="architecture.css">
+  <link rel="stylesheet" href="kratno.css">
+  <noscript><style>@media(max-width:680px){.menu-toggle{display:none}.topbar{height:auto;min-height:0;flex-wrap:wrap}.topbar nav{display:grid;position:static}}</style></noscript>
+  <script src="kratno.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержанию</a>
+<header class="page-top" id="top">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="./" aria-label="УКСП — на главную"><span class="wordmark">УКСП</span><span class="brand-description">Управляющая компания<br>специальных проектов</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Меню <span aria-hidden="true">+</span></button>
+      <nav id="navigation" aria-label="Основная навигация">
+        <a href="./#process">Подход</a><a href="./#cases">Дела</a><a href="kratno.html" aria-current="page">Платформа</a><a href="./#frame">Правила</a><a class="nav-access" href="#apply">Получить приглашение</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section id="intro" class="section platform-section k-hero" aria-labelledby="intro-title">
+  <div class="wrap">
+    <div class="platform-kicker"><span>Компания и платформа</span><span class="platform-family">УКСП <span aria-hidden="true">/</span> KRATNO INVEST</span></div>
+    <div class="platform-layout">
+      <div class="platform-copy">
+        <p class="section-index">Цифровой контур УКСП</p>
+        <h1 id="intro-title">Клуб инвесторов<br>в активы с торгов.<br><em>Доступ по приглашению.</em></h1>
+        <p>Мы ищем активы на торгах, анализируем их и предлагаем участникам клуба только те возможности, которые соответствуют их инвестиционному мандату.</p>
+        <p>Не каталог торгов. Не поток случайных лотов. Только отобранные инвестиционные возможности.</p>
+        <div class="k-actions">
+          <a class="platform-cta" href="#apply"><span>Получить приглашение</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#how">Как это работает <span class="link-line" aria-hidden="true"></span></a>
+        </div>
+        <p class="k-note">Решение об инвестировании принимает инвестор самостоятельно. Кратноинвест предоставляет аналитическую и информационную поддержку.</p>
+        <div class="k-hero-links">
+          <a class="plain-link" href="#behind">Платформа ООО «УКСП»</a>
+          <a class="plain-link" href="#faq">Вопросы</a>
+          <a class="plain-link" href="https://kratnoinvest.ru/login" target="_blank" rel="noopener noreferrer">Вход для участников ↗</a>
+        </div>
+      </div>
+      <!-- Копия index.html:106-110. Два отличия: подпись документа #platform-document-title — абзац p, а не h3 (под h1 был бы пропуск уровня заголовков; стили — kratno.css, п. 2); у .platform-visual role="group" — у div без роли aria-label запрещён (ARIA 1.2) -->
+      <div class="platform-visual" role="group" aria-label="Маршрут инвестора в KRATNO INVEST">
+        <div class="platform-wordmark"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="29" width="8" height="14" rx="1"/><rect x="20" y="19" width="8" height="24" rx="1"/><rect x="35" y="5" width="8" height="38" rx="1"/></svg><span>KRATNO <span>INVEST</span></span><small>Платформа УКСП</small></div>
+        <div class="platform-route" role="group" aria-label="Маршрут на платформе"><button type="button" data-platform-step="0" aria-pressed="true"><span>01</span> Ваш мандат</button><button type="button" data-platform-step="1" aria-pressed="false"><span>02</span> Наш анализ</button><button type="button" data-platform-step="2" aria-pressed="false"><span>03</span> Ваше решение</button></div>
+        <div class="platform-stage" data-active="0"><div class="platform-depth depth-back" aria-hidden="true"></div><div class="platform-depth depth-middle" aria-hidden="true"></div><div class="platform-document"><div class="document-top"><span id="platform-document-type">Инвестиционный мандат</span><span id="platform-document-number">01 / 03</span></div><p id="platform-document-title">Вы определяете<br>рамки поиска.</p><div class="document-tags" id="platform-tags"><span>Бюджет</span><span>География</span><span>Тип актива</span><span>Горизонт</span><span>Уровень риска</span></div><div class="document-bottom"><span class="document-signal" aria-hidden="true"></span><span id="platform-document-note">Отбор начинается с ваших критериев</span></div></div></div>
+        <div class="platform-bottom"><span>Мандат → Анализ → Возможность</span><span>KRATNO INVEST</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="problem" class="section">
+  <div class="wrap">
+    <div class="section-heading"><p class="section-index">01 / Проблема</p><h2>На рынке слишком много лотов.<br><em>Хороших сделок — гораздо меньше.</em></h2><p class="section-description">Ежедневно на торгах появляются новые объекты. Но наличие низкой цены ещё не означает наличие инвестиционной возможности.</p></div>
+    <div class="k-statement">
+      <p>Нужно проверить документы, юридическую историю, ограничения, рыночную стоимость, сценарий выхода и потенциальные риски.</p>
+      <p class="k-lead">Кратноинвест делает этот отбор до того, как возможность попадает к участнику клуба.</p>
+    </div>
+  </div>
+</section>
+<section id="how" class="section process-section">
+  <div class="wrap">
+    <div class="section-heading"><p class="section-index">02 / Процесс</p><h2>Вы определяете мандат.<br><em>Мы ищем возможности.</em></h2><p class="section-description">Здесь мандат — рамки поиска инвестора. <a class="inline-link" href="./#mandates">Мандаты М1–М3</a> на сайте УКСП — направления активов компании.</p></div>
+    <div class="process-grid k-five">
+      <article class="process-step"><div class="step-top"><span>01</span><span class="step-track" aria-hidden="true"></span></div><h3>Инвестиционный мандат</h3><p>Инвестор определяет рамки, внутри которых мы работаем.</p><div class="document-tags"><span>бюджет</span><span>география</span><span>тип актива</span><span>желаемый дисконт</span><span>инвестиционный горизонт</span><span>допустимый уровень риска</span></div></article>
+      <article class="process-step"><div class="step-top"><span>02</span><span class="step-track" aria-hidden="true"></span></div><h3>Поиск</h3><p>Кратноинвест отслеживает торговые площадки и ищет активы, соответствующие мандату.</p></article>
+      <article class="process-step"><div class="step-top"><span>03</span><span class="step-track" aria-hidden="true"></span></div><h3>Анализ</h3><p>По каждому кандидату проверяется:</p><div class="document-tags"><span>цена</span><span>рыночная стоимость</span><span>аналоги</span><span>документы</span><span>юридические обстоятельства</span><span>ограничения</span><span>риски</span><span>сценарии выхода</span></div></article>
+      <article class="process-step"><div class="step-top"><span>04</span><span class="step-track" aria-hidden="true"></span></div><h3>Инвестиционный разбор</h3><p>Инвестор получает структурированный разбор:</p><div class="document-tags"><span>цена покупки</span><span>оценка рынка</span><span>дисконт</span><span>документы</span><span>риски</span><span>потенциальный сценарий</span><span>ключевые вопросы для принятия решения</span></div></article>
+      <article class="process-step"><div class="step-top"><span>05</span><span class="step-track" aria-hidden="true"></span></div><h3>Решение</h3><p>Инвестор самостоятельно принимает решение о покупке. При состоявшейся сделке Кратноинвест получает вознаграждение.</p></article>
+    </div>
+  </div>
+</section>
+<section id="format" class="section">
+  <div class="wrap contour-layout">
+    <div>
+      <p class="section-index">03 / Как это выглядит</p>
+      <h2>Инвестиционные<br><span class="muted">возможности.</span></h2>
+      <p class="contour-note">Пример формата, в котором участник клуба получает возможность. Точный адрес, кадастровые номера и площадка раскрываются участникам.</p>
+      <p class="k-more"><a class="text-link" href="#apply">Получить доступ к разбору <span class="link-line" aria-hidden="true"></span></a></p>
+    </div>
+    <div>
+      <article class="k-lot" aria-label="Формат карточки возможности">
+        <div class="document-top"><span>Формат карточки</span><span>Условный пример</span></div>
+        <h3>Регион · тип актива</h3>
+        <dl class="contour-table">
+          <div><dt>Снижение от начальной цены торгов</dt><dd>— %</dd></div>
+          <div><dt>Целевая цена входа</dt><dd>— ₽</dd></div>
+          <div><dt>Рыночная оценка</dt><dd>— ₽</dd></div>
+        </dl>
+        <p class="k-note">Условный пример. Не реальный объект и не прогноз. Реальные объекты и цифры — в кабинете участника.</p>
+      </article>
+      <div class="k-review">
+        <p class="section-index">Что входит в разбор</p>
+        <div class="document-tags"><span>Документы торгов</span><span>Правовой статус</span><span>Рыночные аналоги</span><span>Обременения и ограничения</span><span>Сценарий выхода</span></div>
+        <p class="k-note">Рыночная оценка — модельный расчёт, а не отчёт оценщика. Перед сделкой рекомендуем подтвердить её независимой оценкой.</p>
+        <p class="k-note">Инвестиционный разбор доступен участникам клуба.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="difference" class="section">
+  <div class="wrap">
+    <div class="section-heading"><p class="section-index">04 / Отличие</p><h2>Мы не пытаемся показать<br><em>вам все лоты.</em></h2></div>
+    <div class="rules-grid k-chain">
+      <div><h3>Обычный поиск</h3><ul><li><span>01</span>Весь поток лотов</li><li><span>02</span>Самостоятельный отбор</li><li><span>03</span>Самостоятельная проверка</li><li><span>04</span>Самостоятельный анализ</li><li><span>05</span>Самостоятельное принятие решения</li></ul></div>
+      <div><h3>KRATNO INVEST</h3><ul><li><span>01</span>Инвестиционный мандат</li><li><span>02</span>Поиск подходящих возможностей</li><li><span>03</span>Первичный отбор</li><li><span>04</span>Аналитика</li><li><span>05</span>Юридическая проверка</li><li><span>06</span>Инвестиционный разбор</li><li class="k-final"><span>07</span>Решение инвестора</li></ul></div>
+    </div>
+  </div>
+</section>
+<section id="terms" class="section rules-section">
+  <div class="wrap">
+    <div class="rules-head"><p class="section-index">05 / Вознаграждение</p><h2>Мы зарабатываем,<br><span>когда вы совершаете сделку.</span></h2><p>Условия участия зависят от типа участника и формата работы. Основное вознаграждение связано с состоявшейся сделкой.</p></div>
+    <div class="rules-grid">
+      <div><h3>Базовая модель</h3><ul>
+        <li><span>01</span>Базовая модель вознаграждения Кратноинвеста — процент от фактической цены приобретённого актива.</li>
+        <li><span>02</span>Базовое вознаграждение возникает по состоявшейся сделке.</li>
+        <li><span>03</span>Прочие условия и расходы — в договоре.</li>
+      </ul></div>
+      <div><h3>Особые сделки</h3><ul>
+        <li><span>01</span>Для отдельных инвестиционных возможностей Кратноинвест может участвовать в сделке на расширенном уровне — от структурирования до сопровождения выхода.</li>
+        <li><span>02</span>Для таких сделок могут применяться индивидуальные условия вознаграждения, включая участие в фактически полученной чистой прибыли.</li>
+        <li><span>03</span>Экономика и риски каждой сделки раскрываются отдельно в её документах.</li>
+      </ul></div>
+    </div>
+    <p class="k-more"><a class="text-link" href="./#frame">Как устроены деньги в специальных проектах УКСП <span class="link-line" aria-hidden="true"></span></a></p>
+  </div>
+</section>
+<section id="who" class="section people-section">
+  <div class="wrap">
+    <div class="section-heading"><p class="section-index">06 / Участники</p><h2>Кто становится<br><span class="muted">участником клуба.</span></h2></div>
+    <div class="people-grid">
+      <article><span class="role-number">01</span><h3>Частный инвестор</h3><p>Инвестор, который хочет самостоятельно приобретать активы с торгов, но не хочет тратить время на ежедневный мониторинг торгов.</p></article>
+      <article><span class="role-number">02</span><h3>Квалифицированный инвестор</h3><p>Инвестор со сформированным инвестиционным мандатом.</p></article>
+      <article><span class="role-number">03</span><h3>Риэлтор / брокер</h3><p>Ищет инвестиционные возможности для себя или своих клиентов.</p></article>
+    </div>
+    <p class="k-route">Владельцам активов, банкам, платформам и юридическим фирмам — на сайт УКСП: вкладки «У меня есть актив» и «Я партнёр» в разделе «Доступ» (кнопка <a class="inline-link" href="./#access">«Обсудить проект»</a>).</p>
+  </div>
+</section>
+<section id="mandate" class="section mandates-section">
+  <div class="wrap contour-layout">
+    <div>
+      <p class="section-index">07 / Персонализация</p>
+      <h2>Нам важно не сколько у вас денег.<br><span class="muted">Нам важно, что вы ищете.</span></h2>
+      <p class="contour-note">Мандат — это рамка, по которой мы отбираем возможности лично для вас. Чем точнее рамка, тем меньше лишнего вы увидите.</p>
+      <p class="k-more"><a class="text-link" href="#apply">Создать свой мандат <span class="link-line" aria-hidden="true"></span></a></p>
+    </div>
+    <div>
+      <p class="section-index">Инвестиционный мандат</p>
+      <dl class="contour-table">
+        <div><dt>Бюджет</dt><dd>30–100 млн ₽</dd></div>
+        <div><dt>География</dt><dd>Москва / МО</dd></div>
+        <div><dt>Актив</dt><dd>Коммерческая недвижимость</dd></div>
+        <div><dt>Минимальный дисконт</dt><dd>25%</dd></div>
+        <div><dt>Количество сделок</dt><dd>1–3 в год</dd></div>
+        <div><dt>Риск</dt><dd>Средний</dd></div>
+      </dl>
+      <p class="k-note">Условный пример мандата. Не реальный клиент и не прогноз.</p>
+    </div>
+  </div>
+</section>
+<section id="behind" class="section contour-section">
+  <div class="wrap contour-layout">
+    <div>
+      <p class="section-index">08 / Опыт</p>
+      <h2>Клуб создан на основе<br><span class="muted">собственного инвестиционного опыта.</span></h2>
+      <p class="contour-note">KRATNO INVEST — платформа ООО «УКСП». УКСП ведёт специальные проекты.</p>
+      <p class="k-note">Исторические результаты не гарантируют результатов будущих инвестиций.</p>
+      <p class="k-more"><a class="text-link" href="./">Сайт УКСП <span class="link-line" aria-hidden="true"></span></a></p>
+    </div>
+    <dl class="contour-table">
+      <div><dt>Реализованные проекты</dt><dd><a class="product-link" href="./#cases">Дела УКСП</a><span class="product-description">Три крупнейших реализованных проекта по цене продажи. Из портфолио 2023–2026. Суммы не являются показателями чистой прибыли.</span></dd></div>
+      <div><dt>Кто ведёт дела</dt><dd><a class="product-link" href="./#people">Роли в работе над активом</a><span class="product-description">Анализ, взаимодействие, право.</span></dd></div>
+      <div><dt>Правила</dt><dd><a class="product-link" href="./#frame">Правила УКСП</a><span class="product-description">«Как устроены деньги», «Границы нашей работы».</span></dd></div>
+      <div><dt>Юридическое лицо</dt><dd>ООО «УКСП»</dd></div>
+    </dl>
+  </div>
+</section>
+<section id="faq" class="section">
+  <div class="wrap">
+    <div class="section-heading"><p class="section-index">09 / Вопросы</p><h2>Частые<br><em>вопросы.</em></h2></div>
+    <div class="k-faq">
+      <details name="faq"><summary><span>Что такое KRATNO INVEST?</span><span class="project-expand" aria-hidden="true">+</span></summary><p>Клуб инвесторов, участникам которого Кратноинвест предлагает отобранные инвестиционные возможности. KRATNO INVEST — платформа ООО «УКСП»: <a class="inline-link" href="#behind">кто стоит за платформой</a>.</p></details>
+      <details name="faq"><summary><span>Вы гарантируете доходность?</span><span class="project-expand" aria-hidden="true">+</span></summary><p>Нет. Инвестиционное решение принимает сам инвестор.</p></details>
+      <details name="faq"><summary><span>Что входит в анализ?</span><span class="project-expand" aria-hidden="true">+</span></summary><p>Цена, рыночная оценка, документы, юридические обстоятельства, риски и потенциальные сценарии выхода.</p></details>
+      <details name="faq"><summary><span>Сколько стоит участие и как вы зарабатываете?</span><span class="project-expand" aria-hidden="true">+</span></summary><p>Условия участия зависят от типа участника и формата работы. Основное вознаграждение связано с состоявшейся сделкой. Базовая модель — процент от фактической цены покупки. Для отдельных сделок могут применяться дополнительные условия. Подробнее — в разделе <a class="inline-link" href="#terms">«Вознаграждение»</a>.</p></details>
+      <details name="faq"><summary><span>Нужно ли быть квалифицированным инвестором?</span><span class="project-expand" aria-hidden="true">+</span></summary><p>Нет, если конкретный продукт или сделка не предусматривает иное. Требования определяются отдельно в зависимости от структуры продукта. Требования к статусу по специальным проектам УКСП — <a class="inline-link" href="./#access">на сайте УКСП</a>.</p></details>
+      <details name="faq"><summary><span>Вы покупаете активы вместо инвестора?</span><span class="project-expand" aria-hidden="true">+</span></summary><p>Нет. Кратноинвест предоставляет информационную и аналитическую поддержку. Решение и совершение сделки остаются за инвестором. Специальные проекты УКСП ведутся по отдельным правилам — <a class="inline-link" href="./#frame">Правила УКСП</a>.</p></details>
+      <details name="faq"><summary><span>Какие активы вы рассматриваете?</span><span class="project-expand" aria-hidden="true">+</span></summary><p>Недвижимость, земля, оборудование, транспорт, права требования и другие категории, если они соответствуют инвестиционному мандату и критериям клуба.</p></details>
+    </div>
+    <p class="k-note k-faq-note">Кратноинвест не является инвестиционным советником и не оказывает услуг доверительного управления.</p>
+  </div>
+</section>
+<section id="apply" class="section access-section">
+  <div class="wrap">
+    <div class="access-top"><p class="section-index">10 / Заявка</p><span>Расскажите, какие активы и сделки вы ищете.</span></div>
+    <div class="access-layout">
+      <div class="access-intro">
+        <h2>Получить приглашение<br><span class="muted">в KRATNO INVEST.</span></h2>
+        <p>Мы оценим соответствие вашему инвестиционному мандату и свяжемся с вами.</p>
+        <p>Материалы по специальным проектам УКСП, предложение актива или партнёрство — <a class="inline-link" href="./#access">Обсудить проект с УКСП</a>.</p>
+      </div>
+      <div class="access-form-container">
+        <form id="apply-form" novalidate data-mode="demo">
+          <p class="k-note k-first">Поля со звёздочкой обязательны — остальное помогает точнее собрать мандат.</p>
+          <div class="form-fields">
+            <div class="field"><label for="k-name">Имя *</label><input id="k-name" name="name" autocomplete="name" maxlength="120" required aria-describedby="k-name-error"><span class="field-error" id="k-name-error"></span></div>
+            <div class="field"><label for="k-contact">Telegram или телефон *</label><input id="k-contact" name="contact" maxlength="120" placeholder="@username или +7…" required aria-describedby="k-contact-error"><span class="field-error" id="k-contact-error"></span></div>
+            <div class="field"><label for="k-email">Email *</label><input id="k-email" name="email" type="email" autocomplete="email" maxlength="160" required aria-describedby="k-email-error"><span class="field-error" id="k-email-error"></span></div>
+          </div>
+          <fieldset class="k-choices"><legend>Капитал на одну сделку</legend><div class="k-grid">
+            <label class="check-label"><input type="radio" name="capital_range" value="lt10"><span>до 10 млн ₽</span></label>
+            <label class="check-label"><input type="radio" name="capital_range" value="10_30"><span>10–30 млн ₽</span></label>
+            <label class="check-label"><input type="radio" name="capital_range" value="30_50"><span>30–50 млн ₽</span></label>
+            <label class="check-label"><input type="radio" name="capital_range" value="50_100"><span>50–100 млн ₽</span></label>
+            <label class="check-label"><input type="radio" name="capital_range" value="gt100"><span>100+ млн ₽</span></label>
+          </div></fieldset>
+          <fieldset class="k-choices"><legend>Статус</legend><div class="k-grid">
+            <label class="check-label"><input type="radio" name="investor_type" value="private"><span>Частный инвестор</span></label>
+            <label class="check-label"><input type="radio" name="investor_type" value="qualified"><span>Квалифицированный инвестор</span></label>
+            <label class="check-label"><input type="radio" name="investor_type" value="realtor"><span>Риэлтор / брокер</span></label>
+            <label class="check-label"><input type="radio" name="investor_type" value="company"><span>Компания / family office</span></label>
+            <label class="check-label"><input type="radio" name="investor_type" value="other"><span>Другое</span></label>
+          </div><p class="k-note">Статус указывается со слов заявителя.</p></fieldset>
+          <fieldset class="k-choices"><legend>Интересующие активы</legend><div class="k-grid">
+            <label class="check-label"><input type="checkbox" name="asset_types" value="Недвижимость"><span>Недвижимость</span></label>
+            <label class="check-label"><input type="checkbox" name="asset_types" value="Земля"><span>Земля</span></label>
+            <label class="check-label"><input type="checkbox" name="asset_types" value="Бизнес"><span>Бизнес</span></label>
+            <label class="check-label"><input type="checkbox" name="asset_types" value="Оборудование"><span>Оборудование</span></label>
+            <label class="check-label"><input type="checkbox" name="asset_types" value="Транспорт"><span>Транспорт</span></label>
+            <label class="check-label"><input type="checkbox" name="asset_types" value="Права требования"><span>Права требования</span></label>
+            <label class="check-label"><input type="checkbox" name="asset_types" value="Другое"><span>Другое</span></label>
+          </div></fieldset>
+          <fieldset class="k-choices"><legend>География</legend><div class="k-grid">
+            <label class="check-label"><input type="checkbox" name="geography" value="Вся Россия"><span>Вся Россия</span></label>
+          </div><div class="field"><label for="k-regions">Другие регионы</label><input id="k-regions" name="regions" maxlength="300"></div></fieldset>
+          <fieldset class="k-choices"><legend>Сделок в год</legend><div class="k-grid">
+            <label class="check-label"><input type="radio" name="deals_per_year" value="1"><span>1</span></label>
+            <label class="check-label"><input type="radio" name="deals_per_year" value="2"><span>2</span></label>
+            <label class="check-label"><input type="radio" name="deals_per_year" value="3+"><span>3+</span></label>
+          </div></fieldset>
+          <div class="form-fields k-one"><div class="field"><label for="k-comment">Комментарий</label><textarea id="k-comment" name="comment" rows="4" maxlength="2000" placeholder="Что вы уже покупали, какие объекты ищете, есть ли ограничения по срокам"></textarea></div></div>
+          <div class="honeypot" aria-hidden="true"><label for="k-website">Сайт</label><input id="k-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="check-label"><input id="k-consent" name="consent" type="checkbox" value="1" aria-required="true" aria-describedby="k-consent-error"><span><label for="k-consent">Согласен на обработку персональных данных.</label> <button class="inline-link" type="button" data-dialog="privacy">Политика</button> и <button class="inline-link" type="button" data-dialog="consent">согласие</button>.</span></div><span class="field-error" id="k-consent-error"></span>
+          <button class="submit-button" type="submit" id="k-submit" disabled>Отправить заявку</button>
+          <p class="form-demo-note">Демонстрационная форма. Контакты не отправляются.</p>
+          <p class="form-demo-note">Заявка не является офертой и не обязывает ни одну из сторон.</p>
+          <div class="form-result" id="k-result" role="status" tabindex="-1" hidden></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="footer-top"><a class="brand footer-brand" href="./" aria-label="УКСП — на главную"><span class="wordmark">УКСП</span><span class="brand-description">Управляющая компания<br>специальных проектов</span></a><a class="footer-platform" href="https://kratnoinvest.ru/login" target="_blank" rel="noopener noreferrer">KRATNO INVEST <span>Вход для участников ↗</span></a><a class="plain-link" href="#top">К началу страницы ↑</a></div>
+  <div class="footer-body"><p>Информация носит справочный характер и не является публичной офертой, индивидуальной инвестиционной рекомендацией или рекламой финансовых инструментов. Приобретение имущества на торгах связано с риском полной потери вложенных средств. Результаты прошлых сделок не гарантируют результатов будущих.</p><p>KRATNO INVEST — платформа ООО «УКСП». Кратноинвест не является инвестиционным советником и не оказывает услуг доверительного управления. Кратноинвест не гарантирует доходность. ООО «УКСП» не является управляющей компанией в значении закона «Об инвестиционных фондах» и не осуществляет лицензируемых видов деятельности на финансовом рынке.</p></div>
+  <div class="footer-bottom"><span>© 2026 ООО «УКСП»</span><div><button class="plain-link" data-dialog="privacy" type="button">Персональные данные</button><button class="plain-link" id="cookie-settings" type="button">Настройки cookies</button></div><span class="preview-status">Дизайн-концепция / KRATNO INVEST</span></div>
+</div></footer>
+<aside class="cookie" id="cookie" aria-label="Настройки cookies" hidden><div><b>Ваш выбор — в приоритете.</b><p>В этой версии аналитика отключена. Сохраним только ваш выбор cookies в браузере.</p></div><div class="cookie-actions"><button type="button" data-cookie="essential">Только необходимые</button><button type="button" data-cookie="all">Разрешить все</button></div></aside>
+<dialog id="info-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span>УКСП / Информация</span><button id="dialog-close" type="button" aria-label="Закрыть окно">×</button></div><h2 id="dialog-title"></h2><div id="dialog-content"></div></dialog>
+<noscript><div class="noscript-note">Для настроек и демонстрации формы включите JavaScript.</div></noscript>
+</body>
+</html>
