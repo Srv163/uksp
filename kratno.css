@@ -152,6 +152,7 @@ body:has(#cookie:not([hidden])){padding-bottom:170px}
 
 /* Итоги портфолио в разделе «08 / Опыт». Цифры — из «Портфолио 2023-2026.xlsx», лист «История»:
    10 строк, 5 со статусом «продано»; вложено = сумма колонки «Стоимость приобретения» по всем 10;
+   факт выручки = сумма «Цена продажи» по 5 проданным; план = сумма «Оценочная цена» по 5 непроданным;
    продажи = сумма «Цена продажи» по 5 проданным. Типографика — как у .project-sale на главной. */
 .k-figures-head{display:flex;justify-content:space-between;gap:20px;margin-top:64px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:10px;color:#8aa195}
 .k-figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0}
@@ -165,3 +166,9 @@ body:has(#cookie:not([hidden])){padding-bottom:170px}
 @media(max-width:960px){.k-figures{grid-template-columns:repeat(2,minmax(0,1fr))}.k-figures>div:nth-child(2){border-right:0}.k-figures>div:nth-child(3){padding-left:0}.k-figures>div:nth-child(n+3){border-top:1px solid var(--line);margin-top:18px}}
 @media(max-width:680px){.k-figures-head{margin-top:44px;font-size:8px}.k-figures dd{font-size:40px}.k-figures small{font-size:10px;margin-left:7px}.k-figures>div{padding:20px 12px 6px 0}.k-figures>div+div{padding-left:12px}.k-figures>div:nth-child(3){padding-left:0}.k-figures dt{font-size:10px}}
 @media print{.k-figures dd{font-size:32px}}
+
+/* Факт и план выручки: план светлее, как «Стоимость приобретения» на главной, чтобы не читался наравне с фактом */
+.k-figures .k-plan dd{color:#a1b4a7}
+.k-figures .k-plan small{color:#b3c2b7}
+.k-figures-note{max-width:78ch;margin:22px 0 0;font-size:11px;line-height:1.7;color:#6f837b}
+@media(max-width:680px){.k-figures-note{font-size:10px;margin-top:18px}}
