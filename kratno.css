@@ -151,7 +151,7 @@ html:has(#cookie:not([hidden])){scroll-padding-bottom:170px}
 body:has(#cookie:not([hidden])){padding-bottom:170px}
 
 /* Итоги портфолио в разделе «08 / Опыт». Цифры — из «Портфолио 2023-2026.xlsx», лист «История»:
-   11 строк, 5 со статусом «продано»; вложено = сумма колонки «Стоимость приобретения» по всем 11;
+   10 строк, 5 со статусом «продано»; вложено = сумма колонки «Стоимость приобретения» по всем 10;
    продажи = сумма «Цена продажи» по 5 проданным. Типографика — как у .project-sale на главной. */
 .k-figures-head{display:flex;justify-content:space-between;gap:20px;margin-top:64px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:10px;color:#8aa195}
 .k-figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0}
