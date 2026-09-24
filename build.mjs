@@ -7,7 +7,7 @@ const number = (value, digits=2) => new Intl.NumberFormat('ru-RU',{maximumFracti
 const date = value => new Intl.DateTimeFormat('ru-RU',{timeZone:'UTC'}).format(new Date(value));
 const days = project => (Date.parse(project.saleDate)-Date.parse(project.purchaseDate))/86400000;
 const dayWord = value => value%100>=11&&value%100<=14?'дней':value%10===1?'день':value%10>=2&&value%10<=4?'дня':'дней';
-assert.equal(data.projects.length,3,'The approved selection contains three projects');
+assert.equal(data.projects.length,5,'The approved selection contains all five realized projects');
 for (const [i,p] of data.projects.entries()) {
   assert.equal(p.status,'realized');
   assert.ok(p.purchasePrice>0 && p.salePrice>0);
@@ -21,8 +21,8 @@ const rows = data.projects.map(p=>`<article class="project" aria-labelledby="pro
 </article>`).join('\n');
 const section = `<section id="cases" class="section cases-section portfolio-section">
     <div class="wrap">
-      <div class="section-heading"><p class="section-index">02 / Реализованные проекты</p><h2>От приобретения<br><em>к реализации.</em></h2><p class="section-description">Три крупнейших реализованных проекта по цене продажи.<br>Из портфолио 2023–2026.</p></div>
-      <div class="portfolio-topline"><span>Избранные проекты / 01—03</span><span>Стоимость приобретения и цена продажи</span></div>
+      <div class="section-heading"><p class="section-index">02 / Реализованные проекты</p><h2>От приобретения<br><em>к реализации.</em></h2><p class="section-description">Все пять реализованных проектов — по убыванию цены продажи.<br>Из портфолио 2023–2026.</p></div>
+      <div class="portfolio-topline"><span>Реализованные проекты / 01—05</span><span>Стоимость приобретения и цена продажи</span></div>
       <div id="registry" class="project-list">${rows}</div>
       <div class="registry-bottom"><p>Цена продажи указана без НДС. Суммы не являются показателями чистой прибыли.</p><button class="plain-link" data-dialog="methodology" type="button">О показателях</button><a class="text-link" href="#access">Обсудить проект <span class="link-line" aria-hidden="true"></span></a></div>
     </div>
